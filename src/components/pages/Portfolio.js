@@ -1,9 +1,30 @@
 import React from 'react';
+//import "../../styling/Portfolio";
 
-export const Portfolio = () => {
-  return(
-    <div>
-      <h4> Portfolio </h4>
-    </div>
-  )
-}
+ const Portfolio = [
+   {
+     title:"",
+     link:"",
+     className:"",
+     gitHubRepo:"",
+   },
+   {
+     title:"",
+     link:"",
+     className:"",
+     gitHubRepo:"",
+   },
+   {
+    title:"",
+    link:"",
+    className:"",
+    gitHubRepo:"",
+  },
+   
+ ];
+
+ //const openSite = (link) => {
+   //window.open(link);
+ //};
+
+ export default Portfolio;

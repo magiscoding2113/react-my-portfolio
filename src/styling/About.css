@@ -1,3 +1,10 @@
-:root {
-    background-color: pink;
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.about {
+    text-align: center;
+    color:black;
+    font-family: 'Courier New', Courier, monospace;
+
 }
