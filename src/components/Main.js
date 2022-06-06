@@ -1,21 +1,22 @@
 import React, {useState} from "react";
-import AboutMe from './pages/About';
-import ContactInfo from './pages/ContactInfo';
-import Portfolio from './pages/Portfolio';
-import Resume from './pages/Resume';
+import AboutMe from '../components/pages/About';
+import ContactInfo from '../components/pages/ContactInfo';
+import Portfolio from '../components/pages/Portfolio';
+import Resume from '../components/pages/Resume';
+import Navigation from "./Navigation";
 
 
-function Main() {
+export default function Main() {
     const [currentPage, setCurrentPage] = useState("About Me");
 
     const renderPage = () => {
         switch(currentPage) {
-         case "Portfolio":
-        return <Portfolio/>;
-            case "Contact":
-                return <ContactInfo />;
-                 case "About Me":
-                    return <AboutMe />;
+         case "About Me":
+        return <AboutMe/>;
+            case "Portfolio":
+                return <Portfolio />;
+                 case "Contact":
+                    return <ContactInfo />;
                      case "Resume":
                         return <Resume />;
                          default:
@@ -26,16 +27,12 @@ function Main() {
 
     return (
         <div className="main">
-           <header>
-                <h1>{"Mariana Tapia"}</h1>
-                <header currentPage={currentPage} handlePageChange={switchPage} />
-                
-            </header>
-            {renderPage()}
+           <Navigation currentPage={currentPage} handlePageChange={switchPage} />
+                {renderPage()}
           
         </div>
 
     );
 }
 
-export default Main;
+
